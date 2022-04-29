@@ -38,7 +38,7 @@ def main():
   info = subprocess.check_output(['megacli', '-AdpAllInfo', '-aAll', '-nolog']).decode('utf-8').splitlines()
   pdlist = subprocess.check_output(['megacli', '-PdList', '-aAll', '-nolog']).decode('utf-8').splitlines()
   out = {}
-  ref = {adapter: None, enclosure:None, slot:None}
+  ref = {"adapter": None, "enclosure":None, "slot":None}
 
   metrics= [
     'out["megacli_controller"]={ "help": "Controler information", "type": "gauge" , "metrics": []}',
